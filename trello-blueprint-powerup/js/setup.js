@@ -11,12 +11,15 @@ var blueprintMap =  {
   'sy': 'System'
 };
 
-var updateCards = function(t) {
-  t.get('card', 'shared', 'type')
-    .then(function(cards){
-      console.log(cards);
-      debugger;
-    });
+var updateCard = function(t, options) {
+  return t.get('card', 'shared', 'type', '')
+    .then(function(type){
+        if(type == '' || Object.keys(blueprintMap).indexOf(type.toLowerCase()) < 0) {
+          return [];
+        }
+
+        debugger;
+    })
 }
 
 var cardButtonCallback = function(t){
@@ -27,7 +30,7 @@ var cardButtonCallback = function(t){
         // console.log(t)
         return t.set('card', 'shared', 'type', bp)
           .then(function(){
-            updateCards(t);
+            updateCard(t);
             t.closePopup();
           });
       }
@@ -48,13 +51,10 @@ var cardButtonCallback = function(t){
 
 TrelloPowerUp.initialize({
   'card-badges': function(t, options){
-    debugger;
+    return updateCard(t, options);
   },
 
   'card-buttons': function(t, options) {
-
-    updateCards(t);
-
     return [{
       // icon: GRAY_ICON,
       text: 'Blueprint',
