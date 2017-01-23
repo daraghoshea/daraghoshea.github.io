@@ -59,7 +59,7 @@ TrelloPowerUp.initialize({
       .then(function(){
         $( '.list-card' ).each( function( index ){
           debugger;
-        }
+        });
       });
   },
 
