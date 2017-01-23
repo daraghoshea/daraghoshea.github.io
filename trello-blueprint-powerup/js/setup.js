@@ -20,7 +20,7 @@ var updateCard = function(t, options) {
 
         return {
           title: 'Blueprint',
-          icon: './images/' + type + '.svg'
+          icon: '../images/' + type + '.svg'
         }
     })
     .then(function(){
