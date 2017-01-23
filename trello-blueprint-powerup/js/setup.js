@@ -18,10 +18,10 @@ var updateCard = function(t, options) {
           return [];
         }
 
-        return {
+        return [{
           title: 'Blueprint',
           icon: '../images/' + type + '.svg'
-        }
+        }];
     })
     .then(function(){
 
