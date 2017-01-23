@@ -13,7 +13,8 @@ var blueprintMap =  {
 
 var updateCards = function(t) {
   t.cards()
-    .then(function(){
+    .then(function(cards){
+      console.log(cards);
       debugger;
     });
 }
@@ -47,6 +48,9 @@ var cardButtonCallback = function(t){
 
 TrelloPowerUp.initialize({
   'card-buttons': function(t, options) {
+
+    updateCards(t);
+
     return [{
       // icon: GRAY_ICON,
       text: 'Blueprint',
