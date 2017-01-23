@@ -53,7 +53,7 @@ var cardButtonCallback = function(t){
 };
 
 
-$(document).ready(function(){
+$(function(){
   setTimeout(function(){
     $( '.list-card' ).each( function( index ){
       debugger;
