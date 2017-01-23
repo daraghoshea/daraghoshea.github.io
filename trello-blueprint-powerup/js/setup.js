@@ -12,6 +12,11 @@ var blueprintMap =  {
 };
 
 var updateCard = function(t, options) {
+  return t.getAll()
+    .then(function(){
+      debugger;
+    });
+
   return t.get('card', 'shared', 'type', '')
     .then(function(type){
         if(type == '' || Object.keys(blueprintMap).indexOf(type.toLowerCase()) < 0) {
