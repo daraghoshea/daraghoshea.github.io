@@ -12,7 +12,7 @@ var blueprintMap =  {
 };
 
 var updateCards = function(t) {
-  t.cards()
+  t.get()
     .then(function(cards){
       console.log(cards);
       debugger;
