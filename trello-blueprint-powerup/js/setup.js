@@ -11,7 +11,7 @@ var blueprintMap =  {
   'sy': 'System'
 };
 
-var updateCards = function() {
+var updateCards = function(t) {
   t.cards()
     .then(function(){
       debugger;
@@ -26,7 +26,7 @@ var cardButtonCallback = function(t){
         // console.log(t)
         return t.set('card', 'shared', 'type', bp)
           .then(function(){
-            updateCards();
+            updateCards(t);
             t.closePopup();
           });
       }
