@@ -53,14 +53,18 @@ var cardButtonCallback = function(t){
 };
 
 
+$(document).ready(function(){
+  setTimeout(function(){
+    $( '.list-card' ).each( function( index ){
+      debugger;
+    });  
+  }, 2000);
+});
+
+
 TrelloPowerUp.initialize({
   'card-badges': function(t, options){
     return updateCard(t, options)
-      .then(function(){
-        $( '.list-card' ).each( function( index ){
-          debugger;
-        });
-      });
   },
 
   'card-buttons': function(t, options) {
