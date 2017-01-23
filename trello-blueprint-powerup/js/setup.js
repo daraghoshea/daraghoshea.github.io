@@ -11,7 +11,7 @@ var blueprintMap =  {
   'sy': 'System'
 };
 
-var updateCards() {
+var updateCards = function() {
   t.cards()
     .then(function(){
       debugger;
