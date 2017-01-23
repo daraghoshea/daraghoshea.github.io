@@ -20,7 +20,7 @@ var updateCard = function(t, options) {
 
         return [{
           title: 'Blueprint',
-          text: type,
+          text: 'BP',
           icon: '../images/' + type + '.svg'
         }];
     })
@@ -55,7 +55,12 @@ var cardButtonCallback = function(t){
 
 TrelloPowerUp.initialize({
   'card-badges': function(t, options){
-    return updateCard(t, options);
+    return updateCard(t, options)
+      .then(function(){
+        $( '.list-card' ).each( function( index ){
+          debugger;
+        }
+      });
   },
 
   'card-buttons': function(t, options) {
