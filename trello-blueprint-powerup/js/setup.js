@@ -17,7 +17,10 @@ var cardButtonCallback = function(t){
       text: blueprintMap[bp],
       callback: function(t){
         // console.log(t)
-        t.set('card', 'shared', 'type', bp)
+        return t.set('card', 'shared', 'type', bp)
+          .then(function(){
+            t.closePopup();
+          });
       }
     };
   });
