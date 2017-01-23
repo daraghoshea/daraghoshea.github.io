@@ -1,0 +1,29 @@
+{
+  "name": "Blueprint Service Design Powerup",
+  "description": "A powerup to make it easier to build Service Design Blueprints",
+  "details": "",
+  "icon": {
+    "url": "./images/logo.png"
+  },
+  "author": "Daragh O'Shea",
+  "capabilities": [
+    "attachment-sections",
+    "attachment-thumbnail",
+    "board-buttons",
+    "callback",
+    "card-badges",
+    "card-buttons",
+    "card-detail-badges",
+    "card-from-url",
+    "format-url",
+    "show-settings"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./index.html"
+    }
+  },
+  "recommend": {
+    "urls": []
+  }
+}
