@@ -11,6 +11,13 @@ var blueprintMap =  {
   'sy': 'System'
 };
 
+var updateCards() {
+  t.cards()
+    .then(function(){
+      debugger;
+    });
+}
+
 var cardButtonCallback = function(t){
   var items = Object.keys(blueprintMap).map(function(bp){
     return {
@@ -19,6 +26,7 @@ var cardButtonCallback = function(t){
         // console.log(t)
         return t.set('card', 'shared', 'type', bp)
           .then(function(){
+            updateCards();
             t.closePopup();
           });
       }
