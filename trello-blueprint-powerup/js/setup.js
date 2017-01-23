@@ -24,9 +24,6 @@ var updateCard = function(t, options) {
           icon: './../images/' + type + '.svg'
         }];
     })
-    .then(function(){
-
-    });
 }
 
 var cardButtonCallback = function(t){
