@@ -47,6 +47,10 @@ var cardButtonCallback = function(t){
 
 
 TrelloPowerUp.initialize({
+  'card-badges': function(t, options){
+    debugger;
+  },
+
   'card-buttons': function(t, options) {
 
     updateCards(t);
